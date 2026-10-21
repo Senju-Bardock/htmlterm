@@ -1,0 +1,16 @@
+[package]
+name = "htmlterm"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "Visor de HTML para terminal: muestra páginas HTML en una consola sin interfaz gráfica"
+
+# Hito 1: sin dependencias externas (solo la librería estándar).
+# Más adelante: html5ever / cssparser / selectors (parsing) y un motor JS (boa_engine o rquickjs).
+[dependencies]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

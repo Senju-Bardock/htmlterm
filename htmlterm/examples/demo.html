@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>htmlterm - página de demostración</title>
+  <style>body { color: red; }</style>
+  <script>console.log("esto no debe verse");</script>
+</head>
+<body>
+  <h1>Bienvenido a htmlterm</h1>
+  <p>Este es un párrafo con <b>negrita</b>, <i>cursiva</i>, <u>subrayado</u>,
+     <s>tachado</s> y <code>código en línea</code>. Incluye entidades como
+     &copy; 2026, &eacute;&ntilde;&uuml; y &lt;etiquetas&gt; sin interpretar.
+     También hay un <a href="https://example.com/docs">enlace a la documentación</a> y
+     un <a href="#abajo">ancla interna</a>.</p>
+
+  <h2>Listas</h2>
+  <ul>
+    <li>Primer elemento</li>
+    <li>Segundo elemento con un texto bastante largo que debería ajustarse a varias líneas de la terminal
+      <ul>
+        <li>Subelemento A</li>
+        <li>Subelemento B
+          <ul><li>Tercer nivel</li></ul>
+        </li>
+      </ul>
+    </li>
+    <li>Tercer elemento</li>
+  </ul>
+  <ol start="3">
+    <li>Tres</li>
+    <li>Cuatro</li>
+    <li>Cinco</li>
+  </ol>
+
+  <h3>Cita y código</h3>
+  <blockquote>La simplicidad es la máxima sofisticación.<br>— atribuida a Leonardo</blockquote>
+  <pre>fn main() {
+    println!("hola");   // los espacios se conservan
+}</pre>
+
+  <h2>Tabla</h2>
+  <table>
+    <caption>Lenguajes de programación</caption>
+    <thead>
+      <tr><th>Lenguaje</th><th>Año</th><th>Paradigma</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Rust</td><td align="right">2015</td><td>Multiparadigma, seguro en memoria</td></tr>
+      <tr><td>Python</td><td align="right">1991</td><td>Multiparadigma, interpretado</td></tr>
+      <tr><td>Go</td><td align="right">2009</td><td>Concurrente, compilado</td></tr>
+      <tr><td colspan="3">Fila con una celda que ocupa tres columnas</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Definiciones y formulario</h2>
+  <dl>
+    <dt>DOM</dt><dd>Document Object Model: la representación en árbol del documento.</dd>
+    <dt>SGR</dt><dd>Select Graphic Rendition: las secuencias ANSI de color y estilo.</dd>
+  </dl>
+  <form>
+    <p>Nombre: <input type="text" placeholder="tu nombre">
+       <input type="checkbox" checked> Acepto <input type="radio"> Otra opción</p>
+    <p><select><option>Rust</option><option selected>Go</option></select>
+       <button>Enviar</button></p>
+  </form>
+
+  <hr>
+  <p id="abajo" hidden>Este párrafo está oculto.</p>
+  <center>Texto centrado con &lt;center&gt;</center>
+  <p><img src="logo.png" alt="Logotipo de htmlterm"> <noscript>Activa JavaScript</noscript></p>
+</body>
+</html>
